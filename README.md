@@ -29,8 +29,8 @@
 <li>React Stack Navigation</li>
 </ul>
 
-<h2>Screenshots</h2>
-<video width="320" height="240" controls align="center">
+<h2>Demo Video</h2>
+<video  >
   <source src="https://drive.google.com/file/d/1fGfHqN4Z0eAxDAgJkPtcY-BOVEgIIvnM/view?usp=drive_link" type="video/mp4">
   
 </video>
