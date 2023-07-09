@@ -22,7 +22,7 @@ const Quiz = ({navigation}) => {
       const url = 'https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986';
       const res = await fetch(url);
       const data = await res.json();
-      // console.log(data.results[0])
+      console.log(data.results[0],"whole data")
       setQuestions(data.results);
       setOptions(generateOptionsAndShuffle(data.results[0])) 
       setLoading(false)
@@ -37,10 +37,10 @@ const Quiz = ({navigation}) => {
     }
     const generateOptionsAndShuffle=(_question)=>{
       const options = [..._question.incorrect_answers]
-      options.push(..._question.correct_answer)
+      options.push(_question.correct_answer)
       console.log(options , "hello appear")
       shuffleArray(options)
-      // console.log(options ,"after")
+      console.log(options ,"after")
       return options;
     }
 
@@ -69,11 +69,12 @@ const Quiz = ({navigation}) => {
   return (
     <View style={styles.container}>
       {loading ?
-       <View style={{flex:1}}>
+       <View style={{flex:1,width: 200, height: 200,alignSelf:'center'}}>
         <LottieView
         source={{ uri: animationUrl }}
         autoPlay
         loop
+        
       />
        </View> : questions && ( 
         <View style = {styles.parent}>
@@ -82,16 +83,16 @@ const Quiz = ({navigation}) => {
       </View>
       <View style={styles.options}>
         <TouchableOpacity style={styles.optionButton} onPress={()=>handleSelectedOption(options[0])}>
-            <Text style={styles.option}>{options[0]}</Text>
+            <Text style={styles.option}>{decodeURIComponent(options[0])}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.optionButton} onPress={()=>handleSelectedOption(options[1])}>
             <Text style={styles.option}>{decodeURIComponent(options[1])}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.optionButton} onPress={()=>handleSelectedOption(options[2])}>
-            <Text style={styles.option}>{encodeURI(options[2])}</Text>
+            <Text style={styles.option}>{decodeURIComponent(options[2])}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.optionButton} onPress={()=>handleSelectedOption(options[3])}>
-            <Text style={styles.option}>{encodeURI(options[3])}</Text>
+            <Text style={styles.option}>{decodeURIComponent(options[3])}</Text>
         </TouchableOpacity>
         
       </View>

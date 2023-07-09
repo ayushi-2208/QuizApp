@@ -6,7 +6,7 @@ import Title from '../component/Title';
 const Result = ({navigation,route}) => {
   const {score} = route.params
  
-  const resultBanner = score>40 ? "https://img.freepik.com/free-vector/people-celebrating-goal-achievement_23-2148823078.jpg?w=996&t=st=1688712358~exp=1688712958~hmac=75b337c9cbc00ce3650b21df77adda002407c3f776799e54b989bcca3075fd63" : "https://img.freepik.com/free-vector/loser-failure-success-winning-businessmen-composition-with-character-discouraged-man-with-down-arrow_1284-63218.jpg?w=740&t=st=1688713468~exp=1688714068~hmac=304bfaff08136494a82df22892ce0bee98580b3c5bf1f998c6024c0bca3a705d"
+  const resultBanner = score>=40 ? "https://img.freepik.com/free-vector/people-celebrating-goal-achievement_23-2148823078.jpg?w=996&t=st=1688712358~exp=1688712958~hmac=75b337c9cbc00ce3650b21df77adda002407c3f776799e54b989bcca3075fd63" : "https://img.freepik.com/free-vector/loser-failure-success-winning-businessmen-composition-with-character-discouraged-man-with-down-arrow_1284-63218.jpg?w=740&t=st=1688713468~exp=1688714068~hmac=304bfaff08136494a82df22892ce0bee98580b3c5bf1f998c6024c0bca3a705d"
   return (
     <View style={styles.container}>
 <Title titleText = 'RESULTS'/>
