@@ -30,8 +30,9 @@
 </ul>
 
 <h2>Demo Video</h2>
+<div style="text-align: center;">
 <video src="https://github.com/ayushi-2208/QuizApp/assets/69577773/de8b756c-ea70-42fe-b6be-24aa87c8357f" type="video/mp4" controls width="640" height="360"></video>
-
+</div>
 
 
 
