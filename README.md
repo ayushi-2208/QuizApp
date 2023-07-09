@@ -30,7 +30,7 @@
 </ul>
 
 <h2>Demo Video</h2>
-<video  >
+<video controls>
   <source src="https://drive.google.com/file/d/1fGfHqN4Z0eAxDAgJkPtcY-BOVEgIIvnM/view?usp=drive_link" type="video/mp4">
   
 </video>
